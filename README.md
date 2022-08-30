@@ -1,2 +1,3 @@
 # Hunting-NanoCore
-analysis and tools for hunting NanoCore C2 communications
+
+Read the guide [here](https://medium.com/@the_abjuri5t/).
