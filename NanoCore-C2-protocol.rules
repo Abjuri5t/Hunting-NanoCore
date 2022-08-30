@@ -1,0 +1,12 @@
+# NanoCore 'heartbeat' signature (0x00000600) encrypted by common key
+alert tcp any any -> any any (msg:"NanoCore 'heartbeat' signature";flags:PA;dsize:12;content:"|08 00 00 00 c1 c3 d0 32 43 59 a1 78|";classtype:trojan-activity;sid:01;rev:1;reference:url,https://medium.com/@the_abjuri5t/;)
+
+# NanoCore command-and-control custom message protocol
+alert tcp any any -> any any (msg:"NanoCore DES length 08";flags:PA;dsize:12;content:"|08 00 00 00|";depth:4;sid:11;classtype:trojan-activity;rev:1;reference:url,https://medium.com/@the_abjuri5t/;)
+alert tcp any any -> any any (msg:"Nanocore DES length 20";flags:PA;dsize:36;content:"|20 00 00 00|";depth:4;sid:12;classtype:trojan-activity;rev:1;reference:url,https://medium.com/@the_abjuri5t/;)
+alert tcp any any -> any any (msg:"Nanocore DES length 28";flags:PA;dsize:44;content:"|28 00 00 00|";depth:4;sid:13;classtype:trojan-activity;rev:1;reference:url,https://medium.com/@the_abjuri5t/;)
+alert tcp any any -> any any (msg:"Nanocore DES length 38";flags:PA;dsize:60;content:"|38 00 00 00|";depth:4;sid:14;classtype:trojan-activity;rev:1;reference:url,https://medium.com/@the_abjuri5t/;)
+alert tcp any any -> any any (msg:"Nanocore DES length 40";flags:PA;dsize:68;content:"|40 00 00 00|";depth:4;sid:15;classtype:trojan-activity;rev:1;reference:url,https://medium.com/@the_abjuri5t/;)
+alert tcp any any -> any any (msg:"Nanocore DES length 48";flags:PA;dsize:76;content:"|48 00 00 00|";depth:4;sid:16;classtype:trojan-activity;rev:1;reference:url,https://medium.com/@the_abjuri5t/;)
+alert tcp any any -> any any (msg:"Nanocore DES length 50";flags:PA;dsize:84;content:"|50 00 00 00|";depth:4;sid:17;classtype:trojan-activity;rev:1;reference:url,https://medium.com/@the_abjuri5t/;)
+alert tcp any any -> any any (msg:"Nanocore DES length 70";flags:PA;dsize:116;content:"|70 00 00 00|";depth:4;sid:18;classtype:trojan-activity;rev:1;reference:url,https://medium.com/@the_abjuri5t/;)
