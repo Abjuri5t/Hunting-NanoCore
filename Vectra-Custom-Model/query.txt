@@ -1,0 +1,1 @@
+protoName:"TCP" AND service:"unknown (unknown)" AND first_orig_resp_data_pkt:(QAAAA* OR OAAAAA*) AND first_resp_orig_data_pkt:IAAAA*
