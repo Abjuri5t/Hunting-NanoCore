@@ -3,5 +3,5 @@ A Custom Model can be deployed in Vectra by making use of the Recall search in [
 The query `(protoName:"TCP" AND service:"unknown (unknown)") AND (first_orig_resp_data_pkt:(QAAAA* OR OAAAA*) AND first_resp_orig_data_pkt:IAAAA*)` can be used to alert on potential NanoCore command-and-control connections. In practice, the detection may be triggered multiple times in a row as NanoCore's C2s have a tendency to drop and reset connections. I was unable to find any false positives in my testing - but please contact me if a false positive does occur so that I can investigate and improve the query
 
 There are two parts to the Recall query:
-`first_orig_resp_data_pkt:(QAAAA* OR OAAAA*) AND first_resp_orig_data_pkt:IAAAA*` observe the contents of the RAT's introduction message and the C2 server's response
-`protoName:"TCP" AND service:"unknown (unknown)"` functions as a secondary condition to speed-up searches and further mitigate false positives
+- `first_orig_resp_data_pkt:(QAAAA* OR OAAAA*) AND first_resp_orig_data_pkt:IAAAA*` observe the contents of the RAT's introduction message and the C2 server's response
+- `protoName:"TCP" AND service:"unknown (unknown)"` functions as a secondary condition to speed-up searches and further mitigate false positives
