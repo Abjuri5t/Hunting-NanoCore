@@ -1,0 +1,25 @@
+[
+  {
+    "_id": "3ff1d1d0-2a31-11ed-a468-f76e2a9fd3ae",
+    "_type": "search",
+    "_source": {
+      "title": "NanoCore Command-and-Control Heartbeat",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "protoName",
+        "orig_ip_bytes",
+        "resp_ip_bytes",
+        "first_orig_resp_data_pkt"
+      ],
+      "sort": [
+        "ts",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"a7480050-3118-11e8-b629-33a5d6f661b4\",\"highlightAll\":true,\"version\":true,\"query\":{\"query\":\"((local_orig:true AND local_resp:false) OR (local_orig:false AND local_resp:true)) AND protoName:\\\"TCP\\\" AND service:\\\"unknown (unknown)\\\" AND first_orig_resp_data_pkt:(QAAAA* OR OAAAAA*) AND first_resp_orig_data_pkt:IAAAA*\",\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    }
+  }
+]
